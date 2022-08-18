@@ -86,7 +86,13 @@ int main() {
         vec.push_back(i);
     }
 
+    string str1 = "123456789";
+    string str2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    BOOST_LOG_TRIVIAL(debug) << "test: " << logging::dump(&str1[0], 3);
+    BOOST_LOG_TRIVIAL(debug) << "test: " << logging::dump(&str1[0], 3);
+    BOOST_LOG_TRIVIAL(debug) << "test: " << logging::dump(&str2[0], 27);
 
+#if 0
     BOOST_LOG_TRIVIAL(trace) << "A trace severity message";
     BOOST_LOG_TRIVIAL(debug) << "A debug severity message";
     BOOST_LOG_TRIVIAL(info) << "An informational severity message";
@@ -151,5 +157,6 @@ int main() {
 
     string a = "hello world";
     BOOST_LOG_TRIVIAL(debug) << a << a << a;
+#endif
     return 0;
 }
